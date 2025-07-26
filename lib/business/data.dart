@@ -254,7 +254,7 @@ class DataKontrol {
     CustomerInfo info = await Purchases.getCustomerInfo();
     bool aktifmi = info.entitlements.all["myabonelik"]?.isActive ?? false;
 
-    print("ABONELİK : $aktifmi");
+    print("ABONELİKk : $aktifmi");
 
     ref.read(isProProvider.notifier).state = aktifmi;
   }
