@@ -210,7 +210,7 @@ class _MacroGuncellemeContainerState extends ConsumerState<MacroGuncellemeContai
             
               showCheckDialog();
 
-            }, child: Text("Done", style: TextStyle(fontSize: 21),)),
+            }, child: Text("Save", style: TextStyle(fontSize: 21),)),
           )
 
         ],

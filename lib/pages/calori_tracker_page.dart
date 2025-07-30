@@ -214,7 +214,7 @@ class MakroAndCaloriesArea extends ConsumerWidget {
 
               Spacer(),
 
-              ElevatedButton(
+              /* ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.primaryContainer,
                   shape: RoundedRectangleBorder(
@@ -229,7 +229,7 @@ class MakroAndCaloriesArea extends ConsumerWidget {
                   //Navigator.of(context).pop();
                 }, 
                 child: Text("Reset Macros", style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),)
-              ),
+              ), */
             ],
           ),
 
