@@ -94,7 +94,7 @@ class _NavigationState extends ConsumerState<Navigation> with WidgetsBindingObse
   Future<void> initializeRevenueCat() async {
     final apiKey = Platform.isAndroid
         ? 'goog_TGUnOCYiqLGGgOjjXzxnWQnJkVf' // <- Buraya Android anahtarını yaz
-        : 'YOUR_REVENUECAT_IOS_API_KEY';    // <- Buraya iOS anahtarını yaz
+        : 'appl_TSQJbFRzILbATuUYZyEZZpoqrEu';    // <- Buraya iOS anahtarını yaz
 
     await Purchases.configure(PurchasesConfiguration(apiKey));
     

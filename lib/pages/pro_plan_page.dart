@@ -43,12 +43,12 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
     });
   } */
 
-  Future<void> satinAlProPlan() async {
+  Future<void> satinAlProPlanAndroid() async {
     try {
       Offerings offerings = await Purchases.getOfferings();
       Offering? proplan = offerings.getOffering("myabonelik");
 
-      print("SFDFAFDSAFDSAFDSAFFSAFDFDFSDFDFDFDSFDF");
+      
 
       if (proplan != null && proplan.availablePackages.isNotEmpty) {
         Package paket = proplan.availablePackages.first;
@@ -76,6 +76,30 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
       print("Satın alma hatası: $e");
     }
   }
+
+  Future<void> satinAlProPlanIos () async {
+
+    try {
+      Offerings offerings = await Purchases.getOfferings();
+      Offering? proplan = offerings.getOffering("pro_monthly");
+
+      if (proplan != null && proplan.availablePackages.isNotEmpty) {
+
+        Package paket = proplan.availablePackages.first;
+        CustomerInfo info = await Purchases.purchasePackage(paket);
+        bool aktifMi = info.entitlements.all["pro-month"]?.isActive ?? false;
+        print("UYELIK AKTIF OLDUMU : $aktifMi");
+        ref.read(isProProvider.notifier).state = aktifMi;
+
+      }
+      else {
+        print("proplan bulunamadı.");
+      }
+
+    } catch (e) {
+      print("Satın alma hatası: $e");
+    }
+  } 
 
 
 
@@ -242,7 +266,14 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
                         width: 300,
                         child: ElevatedButton(onPressed: () {
                           if (ref.read(isProProvider) == false) {
-                            satinAlProPlan();
+                            if (Platform.isAndroid) {
+
+                              satinAlProPlanAndroid();
+                            }
+                            else {
+                              satinAlProPlanIos();
+                            }
+                            
                             //showMesaj("FALSE");
                           }
                           else {
