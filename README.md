@@ -4,6 +4,11 @@ A new Flutter project.
 
 ## Getting Started
 ![Ana Sayfa](assets/screenshot/sc1.png)
+![Ana Sayfa](assets/screenshot/sc2.png)
+![Ana Sayfa](assets/screenshot/sc3.png)
+![Ana Sayfa](assets/screenshot/sc4.png)
+![Ana Sayfa](assets/screenshot/sc5.png)
+![Ana Sayfa](assets/screenshot/sc6.png)
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
