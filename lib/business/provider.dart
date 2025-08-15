@@ -12,7 +12,7 @@ final themeModeProvider = StateProvider<ThemeMode>((ref) => ThemeMode.light);
 
 final isProProvider = StateProvider<bool>((ref) => false);
 
-final versionProvider = StateProvider<bool?>((ref) => null);
+final versionProvider = StateProvider<bool?>((ref) => true);
 
 final dataControlProvider = Provider((ref) => DataKontrol());
 
