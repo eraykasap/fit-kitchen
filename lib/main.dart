@@ -193,8 +193,15 @@ class _NavigationState extends ConsumerState<Navigation> with WidgetsBindingObse
           actions: [
 
             TextButton(onPressed: () async {
-              final url = Uri.parse("https://play.google.com/store/apps/details?id=com.fit_food_app");
-              await launchUrl(url, mode: LaunchMode.externalApplication);
+              final url_android = Uri.parse("https://play.google.com/store/apps/details?id=com.fit_food_app");
+              final url_ios = Uri.parse("https://apps.apple.com/us/app/fit-kitchen/id6749202685");
+              if (Platform.isAndroid) {
+                await launchUrl(url_android, mode: LaunchMode.externalApplication);
+              }
+              else {
+                await launchUrl(url_ios, mode: LaunchMode.externalApplication);
+              }
+              
             }, child: Text("Ok"))
           ],
         );

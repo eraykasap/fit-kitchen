@@ -24,10 +24,10 @@ android {
         applicationId = "com.fit_food_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 21
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = 15
-        versionName = "15.0.0" 
+        versionCode = 20
+        versionName = "20.0.3" 
         //multiDexEnabled.set(true)
         extra.set("multiDexEnabled", true)
 
@@ -36,7 +36,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("C:/FlutterDers/uygulamalar/food_app/food_app_deneme/fit_food_app/key.jks")
+            storeFile = file("C:/flutter_proje/fit-kitchen/key.jks")
             storePassword = "532508"
             keyAlias = "my-key-alias"
             keyPassword = "532508"
