@@ -4,6 +4,7 @@ import 'package:fit_food_app/business/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProPlanPage extends ConsumerStatefulWidget {
   const ProPlanPage({super.key});
@@ -260,7 +261,7 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
               
                     //! ELEVATED BUTTON SUB
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 60),
+                      padding: const EdgeInsets.only(bottom: 15),
                       child: SizedBox(
                         height: 50,
                         width: 300,
@@ -282,7 +283,48 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
                           
                         }, child: Text("Subscribe / \$5,99", style: TextStyle(fontSize: 21),))
                       ),
+                    ),
+
+                    Center(
+                      child: SizedBox(
+                        width: 350,
+                        child: Center(
+                          child: Text(
+                            "The subscription will be renewed every month.",
+                            style: TextStyle(fontSize: 14, color: Colors.white),
+                          ),
+                        ),
+                      )
+                    ),
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+
+                        TextButton(onPressed: () async {
+
+                          final url = Uri.parse("https://sites.google.com/view/gravitydash/ana-sayfa");
+                          await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
+
+                        }, child: Text("Privacy Policy", style: TextStyle(color: Colors.white),)),
+
+                        SizedBox(width: 25,),
+
+                        TextButton(onPressed: () async {
+
+                          final url = Uri.parse("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
+                          await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
+
+                        }, child: Text("User License Agreement", style: TextStyle(color: Colors.white),)),
+
+                      ],
+                    ),
+
+                    SizedBox(
+                      height: 30,
                     )
+
                 
                   ],
                 ),
