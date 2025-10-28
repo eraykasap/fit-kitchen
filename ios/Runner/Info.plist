@@ -3,29 +3,6 @@
 <plist version="1.0">
 <dict>
 
-	<key>FacebookAppID</key>
-	<string>1170037888368594</string>
-	<key>FacebookClientToken</key>
-	<string>fd2a334fd07eb7c9ae4251cae536ec9b</string>
-
-	<key>CFBundleURLTypes</key>
-	<array>
-    	<dict>
-        	<key>CFBundleURLSchemes</key>
-        	<array>
-            	<string>fb1170037888368594</string>
-        	</array>
-    	</dict>
-	</array>
-
-		<key>LSApplicationQueriesSchemes</key>
-	<array>
-    	<string>fbapi</string>
-    	<string>fb-messenger-share</string>
-    	<string>fbauth2</string>
-    	<string>fbshareextension</string>
-	</array>
-	
 
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
