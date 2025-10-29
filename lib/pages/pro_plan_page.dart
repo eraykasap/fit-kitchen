@@ -298,7 +298,7 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
                     ),
 
 
-                    /* Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
 
@@ -323,7 +323,7 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
 
                     SizedBox(
                       height: 30,
-                    ) */
+                    )
 
                 
                   ],
