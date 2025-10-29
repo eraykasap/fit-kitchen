@@ -1,13 +1,4 @@
 PODS:
-  - facebook_app_events (0.20.0):
-    - FBSDKCoreKit (~> 18.0)
-    - Flutter
-  - FBAEMKit (18.0.1):
-    - FBSDKCoreKit_Basics (= 18.0.1)
-  - FBSDKCoreKit (18.0.1):
-    - FBAEMKit (= 18.0.1)
-    - FBSDKCoreKit_Basics (= 18.0.1)
-  - FBSDKCoreKit_Basics (18.0.1)
   - Flutter (1.0.0)
   - package_info_plus (0.4.5):
     - Flutter
@@ -30,7 +21,6 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - facebook_app_events (from `.symlinks/plugins/facebook_app_events/ios`)
   - Flutter (from `Flutter`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
@@ -41,15 +31,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - FBAEMKit
-    - FBSDKCoreKit
-    - FBSDKCoreKit_Basics
     - PurchasesHybridCommon
     - RevenueCat
 
 EXTERNAL SOURCES:
-  facebook_app_events:
-    :path: ".symlinks/plugins/facebook_app_events/ios"
   Flutter:
     :path: Flutter
   package_info_plus:
@@ -66,10 +51,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
-  facebook_app_events: 6b4e3e9d2838e82c75996867a0c6c18dcabf2441
-  FBAEMKit: b2ed182002dbcb65d5a60059c9693d322186cd00
-  FBSDKCoreKit: 7f96852f2539bdb88ba8d47e5ab4ae70a6f8d691
-  FBSDKCoreKit_Basics: 22d4c1a509ded4e45116f3bb167a14907550f62e
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46

@@ -304,8 +304,8 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
 
                         TextButton(onPressed: () async {
 
-                          final url = Uri.parse("https://sites.google.com/view/gravitydash/ana-sayfa");
-                          await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
+                          final url = Uri.parse("https://sites.google.com/view/myfitt/ana-sayfa");
+                          await launchUrl(url, mode: LaunchMode.externalApplication);
 
                         }, child: Text("Privacy Policy", style: TextStyle(color: Colors.white),)),
 
@@ -314,7 +314,7 @@ class _ProPlanPageState extends ConsumerState<ProPlanPage> {
                         TextButton(onPressed: () async {
 
                           final url = Uri.parse("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
-                          await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
+                          await launchUrl(url, mode: LaunchMode.externalApplication);
 
                         }, child: Text("User License Agreement", style: TextStyle(color: Colors.white),)),
 
