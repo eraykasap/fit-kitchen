@@ -1,5 +1,6 @@
 import 'package:fit_food_app/business/provider.dart';
 import 'package:fit_food_app/pages/detay_page.dart';
+import 'package:fit_food_app/pages/pro_plan_page.dart';
 import 'package:fit_food_app/widgets/sabit_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -54,36 +55,47 @@ class FavoriPage extends ConsumerWidget {
                             var item = kahvaltiList[index];
                             return GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder:
-                                        (context) => detayPage(
+
+                                if (ref.read(isProProvider) == true || item.isPro == false) {
+                                  Navigator.of(context).push(MaterialPageRoute(builder:(context) => detayPage
+                                    (
                                           image: item.image,
                                           title: item.title,
                                           besinDegerleri: item.besinDegerleri,
                                           malzemeler: item.besinDegerleri,
                                           talimatlar: item.talimatlar,
-                                        ),
+                                    ),
                                   ),
                                 );
+                                } 
+                                else {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProPlanPage()));
+                                }
+
+                                
+
+
                               },
-                              child: TarifContainer(
-                                image: item.image,
-                                title: item.title,
-                                isPro: item.isPro,
-                                proUye: ref.watch(isProProvider),
-                                besinDegerleri: item.besinDegerleri,
-                                isSave: true,
-                                onFavoritePressed: (isSaved, balue) {
-                                  ref
-                                      .read(kahvaltiListProvider.notifier)
-                                      .update(
-                                        (state) =>
-                                            state
-                                                .where((t) => t.id != item.id)
-                                                .toList(),
-                                      );
-                                },
+                              child: Container(
+                                //color: Colors.blueAccent,
+                                child: TarifContainer(
+                                  image: item.image,
+                                  title: item.title,
+                                  isPro: item.isPro,
+                                  proUye: ref.watch(isProProvider),
+                                  besinDegerleri: item.besinDegerleri,
+                                  isSave: true,
+                                  onFavoritePressed: (isSaved, balue) {
+                                    ref
+                                        .read(kahvaltiListProvider.notifier)
+                                        .update(
+                                          (state) =>
+                                              state
+                                                  .where((t) => t.id != item.id)
+                                                  .toList(),
+                                        );
+                                  },
+                                ),
                               ),
                             );
                           },
