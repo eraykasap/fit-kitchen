@@ -132,18 +132,21 @@ class FavoriPage extends ConsumerWidget {
                             var item = ogleList[index];
                             return GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder:
-                                        (context) => detayPage(
+                                if (ref.read(isProProvider) == true || item.isPro == false) {
+                                  Navigator.of(context).push(MaterialPageRoute(builder:(context) => detayPage
+                                    (
                                           image: item.image,
                                           title: item.title,
                                           besinDegerleri: item.besinDegerleri,
-                                          malzemeler: item.malzemeler,
+                                          malzemeler: item.besinDegerleri,
                                           talimatlar: item.talimatlar,
-                                        ),
+                                    ),
                                   ),
                                 );
+                                } 
+                                else {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProPlanPage()));
+                                }
                               },
                               child: TarifContainer(
                                 image: item.image,
@@ -198,18 +201,25 @@ class FavoriPage extends ConsumerWidget {
                             var item = aksamList[index];
                             return GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder:
-                                        (context) => detayPage(
+
+
+                                if (ref.read(isProProvider) == true || item.isPro == false) {
+                                  Navigator.of(context).push(MaterialPageRoute(builder:(context) => detayPage
+                                    (
                                           image: item.image,
                                           title: item.title,
                                           besinDegerleri: item.besinDegerleri,
-                                          malzemeler: item.malzemeler,
+                                          malzemeler: item.besinDegerleri,
                                           talimatlar: item.talimatlar,
-                                        ),
+                                    ),
                                   ),
                                 );
+                                } 
+                                else {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProPlanPage()));
+                                }
+
+                                
                               },
                               child: TarifContainer(
                                 image: item.image,
@@ -264,18 +274,25 @@ class FavoriPage extends ConsumerWidget {
                             var item = araList[index];
                             return GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder:
-                                        (context) => detayPage(
+
+
+                                if (ref.read(isProProvider) == true || item.isPro == false) {
+                                  Navigator.of(context).push(MaterialPageRoute(builder:(context) => detayPage
+                                    (
                                           image: item.image,
                                           title: item.title,
                                           besinDegerleri: item.besinDegerleri,
-                                          malzemeler: item.malzemeler,
+                                          malzemeler: item.besinDegerleri,
                                           talimatlar: item.talimatlar,
-                                        ),
+                                    ),
                                   ),
                                 );
+                                } 
+                                else {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProPlanPage()));
+                                }
+
+
                               },
                               child: TarifContainer(
                                 image: item.image,
